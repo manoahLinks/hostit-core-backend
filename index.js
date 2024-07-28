@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-    res.send('welcome to Host-it-backend')
+    res.send('welcome to Host-it-core-backend')
 })
 
 app.use('/events', eventRoutes);

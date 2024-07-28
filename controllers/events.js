@@ -2,14 +2,14 @@ require('dotenv').config();
 const sdk =  require('@api/poap'),
     ethers = require('ethers'),
     eventAbi = require('../abis/eventAbi.json'),
-    fs = require('fs')
+    fs = require('fs');
     const qr = require('qrcode');
 const { generateQr, verifyMessage, genRandomNumbers } = require('../utils/helpers');
 const Link = require('../models/links');
 const User = require('../models/user');
 
 
-const provider = new ethers.JsonRpcProvider(process.env.CORE_RPC_URL);
+const provider = new ethers.JsonRpcProvider("https://rpc.test.btcs.network");
 
 const encryptedKey = fs.readFileSync("./.encryptKey.json", "utf8");
 
@@ -78,32 +78,32 @@ exports.createEvent = async (req, res) => {
             // make call to POAP endpoint
             console.log('create successful !')
 
-            // sdk.auth(process.env.POAP_API_KEY);
-            // sdk.pOSTEvents(
-            //     {name,
-            //     description,
-            //     city,
-            //     country,
-            //     start_date,
-            //     end_date,
-            //     expiry_date,
-            //     virtual_event,
-            //     image,
-            //     secret_code,
-            //     email,
-            //     event_url,
-            //     event_template_id,
-            //     private_event,
-            //     notify_issuer,
-            //     requested_codes
-            // }
-            // )
-            //     .then(({ data }) =>{
-            //         // console.log(data)
-            //         // console.log(data)
-            //        return res.json(data)
-            //     } )
-            //     .catch(err => {return res.json({error: err.message, err: err})});
+            sdk.auth(process.env.POAP_API_KEY);
+            sdk.pOSTEvents(
+                {name,
+                description,
+                city,
+                country,
+                start_date,
+                end_date,
+                expiry_date,
+                virtual_event,
+                image,
+                secret_code,
+                email,
+                event_url,
+                event_template_id,
+                private_event,
+                notify_issuer,
+                requested_codes
+            }
+            )
+                .then(({ data }) =>{
+                    // console.log(data)
+                    // console.log(data)
+                   return res.json(data)
+                } )
+                .catch(err => {return res.json({error: err.message, err: err})});
             
         } 
         
