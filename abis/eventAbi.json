@@ -1,0 +1,1088 @@
+[
+    {
+        "inputs": [],
+        "name": "ALREADY_EXIST",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "AccessControlBadConfirmation",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "name": "account",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "name": "neededRole",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            }
+        ],
+        "name": "AccessControlUnauthorizedAccount",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "EMAIL_MISMATCH",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "INPUT_MISMATCH",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "INSUFFICIENT_AMOUNT",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "INVALID_INPUT",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "ReentrancyGuardReentrantCall",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "UNREGISTERED_USER",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "name": "newOrganizer",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "AddOrganizer",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "email",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "name": "addr",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "ENSRegistered",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "name": "EventCancelled",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "name": "eventNameE",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "indexed": true,
+                "name": "organizer",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "EventCreated",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "date",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "startTime",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "endTime",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "virtualEvent",
+                "internalType": "bool",
+                "type": "bool"
+            },
+            {
+                "indexed": false,
+                "name": "privateEvent",
+                "internalType": "bool",
+                "type": "bool"
+            }
+        ],
+        "name": "EventUpdated",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "name": "newOrganizer",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "RemoveOrganizer",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "role",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "name": "previousAdminRole",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "name": "newAdminRole",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            }
+        ],
+        "name": "RoleAdminChanged",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "role",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "name": "account",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "sender",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "RoleGranted",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "role",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "name": "account",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "sender",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "RoleRevoked",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "buyer",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "eventNameE",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "indexed": true,
+                "name": "eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "name": "ticketId",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "name": "TicketPurchased",
+        "anonymous": false,
+        "type": "event"
+    },
+    {
+        "stateMutability": "payable",
+        "type": "fallback"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            }
+        ],
+        "inputs": [],
+        "name": "DEFAULT_ADMIN_ROLE",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_newOrganizer",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "addEventOrganizer",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_account",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "name": "_ticketId",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "name": "balanceOfTickets",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_ticketId",
+                "internalType": "uint256[]",
+                "type": "uint256[]"
+            },
+            {
+                "name": "_quantity",
+                "internalType": "uint256[]",
+                "type": "uint256[]"
+            },
+            {
+                "name": "_buyer",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "buyTicket",
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_organizer",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "cancelEvent",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_organizer",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "name": "_ticketId",
+                "internalType": "uint256[]",
+                "type": "uint256[]"
+            },
+            {
+                "name": "_quantity",
+                "internalType": "uint256[]",
+                "type": "uint256[]"
+            },
+            {
+                "name": "_price",
+                "internalType": "uint256[]",
+                "type": "uint256[]"
+            }
+        ],
+        "name": "createEventTicket",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "_organizer",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "name": "_eventName",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "name": "_description",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "name": "_eventAddress",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "name": "_date",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_startTime",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_endTime",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_virtualEvent",
+                "internalType": "bool",
+                "type": "bool"
+            },
+            {
+                "name": "_privateEvent",
+                "internalType": "bool",
+                "type": "bool"
+            }
+        ],
+        "name": "createNewEvent",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "name": "email",
+                        "internalType": "bytes32",
+                        "type": "bytes32"
+                    },
+                    {
+                        "name": "walletAddress",
+                        "internalType": "address",
+                        "type": "address"
+                    },
+                    {
+                        "name": "avatar",
+                        "internalType": "string",
+                        "type": "string"
+                    },
+                    {
+                        "name": "isRegistered",
+                        "internalType": "bool",
+                        "type": "bool"
+                    }
+                ],
+                "name": "",
+                "internalType": "struct Registry.ENS[]",
+                "type": "tuple[]"
+            }
+        ],
+        "inputs": [],
+        "name": "getAllENS",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "contract EventContract[]",
+                "type": "address[]"
+            }
+        ],
+        "inputs": [],
+        "name": "getAllEvents",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "contract EventContract[]",
+                "type": "address[]"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "_organizer",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "getAllEventsByOrganizer",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "uint256[]",
+                "type": "uint256[]"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "name": "getCreatedTickets",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "name": "email",
+                        "internalType": "bytes32",
+                        "type": "bytes32"
+                    },
+                    {
+                        "name": "walletAddress",
+                        "internalType": "address",
+                        "type": "address"
+                    },
+                    {
+                        "name": "avatar",
+                        "internalType": "string",
+                        "type": "string"
+                    },
+                    {
+                        "name": "isRegistered",
+                        "internalType": "bool",
+                        "type": "bool"
+                    }
+                ],
+                "name": "",
+                "internalType": "struct Registry.ENS",
+                "type": "tuple"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "_user",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "name": "_email",
+                "internalType": "string",
+                "type": "string"
+            }
+        ],
+        "name": "getENS",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "name": "email",
+                        "internalType": "bytes32",
+                        "type": "bytes32"
+                    },
+                    {
+                        "name": "walletAddress",
+                        "internalType": "address",
+                        "type": "address"
+                    },
+                    {
+                        "name": "avatar",
+                        "internalType": "string",
+                        "type": "string"
+                    },
+                    {
+                        "name": "isRegistered",
+                        "internalType": "bool",
+                        "type": "bool"
+                    }
+                ],
+                "name": "",
+                "internalType": "struct Registry.ENS",
+                "type": "tuple"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "_user",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "getENSByAddress",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "name": "email",
+                        "internalType": "bytes32",
+                        "type": "bytes32"
+                    },
+                    {
+                        "name": "walletAddress",
+                        "internalType": "address",
+                        "type": "address"
+                    },
+                    {
+                        "name": "avatar",
+                        "internalType": "string",
+                        "type": "string"
+                    },
+                    {
+                        "name": "isRegistered",
+                        "internalType": "bool",
+                        "type": "bool"
+                    }
+                ],
+                "name": "",
+                "internalType": "struct Registry.ENS",
+                "type": "tuple"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "_email",
+                "internalType": "string",
+                "type": "string"
+            }
+        ],
+        "name": "getENSbyEmail",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "name": "eventId",
+                        "internalType": "uint256",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "organizer",
+                        "internalType": "address",
+                        "type": "address"
+                    },
+                    {
+                        "name": "eventName",
+                        "internalType": "string",
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "internalType": "string",
+                        "type": "string"
+                    },
+                    {
+                        "name": "eventAddress",
+                        "internalType": "string",
+                        "type": "string"
+                    },
+                    {
+                        "name": "date",
+                        "internalType": "uint256",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "startTime",
+                        "internalType": "uint256",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "endTime",
+                        "internalType": "uint256",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "virtualEvent",
+                        "internalType": "bool",
+                        "type": "bool"
+                    },
+                    {
+                        "name": "privateEvent",
+                        "internalType": "bool",
+                        "type": "bool"
+                    },
+                    {
+                        "name": "totalTickets",
+                        "internalType": "uint256",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "soldTickets",
+                        "internalType": "uint256",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "isCancelled",
+                        "internalType": "bool",
+                        "type": "bool"
+                    }
+                ],
+                "name": "",
+                "internalType": "struct EventContract.EventDetails",
+                "type": "tuple"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "name": "getEventDetails",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "role",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            }
+        ],
+        "name": "getRoleAdmin",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "role",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            },
+            {
+                "name": "account",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "grantRole",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "bool",
+                "type": "bool"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "role",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            },
+            {
+                "name": "account",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "hasRole",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "_user",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "name": "_email",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "name": "_avatar",
+                "internalType": "string",
+                "type": "string"
+            }
+        ],
+        "name": "registerENS",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_removedOrganizer",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "removeOrganizer",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "role",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            },
+            {
+                "name": "callerConfirmation",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "renounceRole",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "role",
+                "internalType": "bytes32",
+                "type": "bytes32"
+            },
+            {
+                "name": "account",
+                "internalType": "address",
+                "type": "address"
+            }
+        ],
+        "name": "revokeRole",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "bool",
+                "type": "bool"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "interfaceId",
+                "internalType": "bytes4",
+                "type": "bytes4"
+            }
+        ],
+        "name": "supportsInterface",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "name": "totalSupplyAllTickets",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [
+            {
+                "name": "",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_ticketId",
+                "internalType": "uint256",
+                "type": "uint256"
+            }
+        ],
+        "name": "totalSupplyTicketId",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "_user",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "name": "_oldEmail",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "name": "_newEmail",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "name": "_avatar",
+                "internalType": "string",
+                "type": "string"
+            }
+        ],
+        "name": "updateENS",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "outputs": [],
+        "inputs": [
+            {
+                "name": "_eventId",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_organizer",
+                "internalType": "address",
+                "type": "address"
+            },
+            {
+                "name": "_eventName",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "name": "_description",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "name": "_eventAddress",
+                "internalType": "string",
+                "type": "string"
+            },
+            {
+                "name": "_date",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_startTime",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_endTime",
+                "internalType": "uint256",
+                "type": "uint256"
+            },
+            {
+                "name": "_virtualEvent",
+                "internalType": "bool",
+                "type": "bool"
+            },
+            {
+                "name": "_privateEvent",
+                "internalType": "bool",
+                "type": "bool"
+            }
+        ],
+        "name": "updateEvent",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "stateMutability": "payable",
+        "type": "receive"
+    }
+]
